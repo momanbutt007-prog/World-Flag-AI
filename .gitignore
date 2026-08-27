@@ -1,0 +1,51 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Test images
+tests/test_images/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dataset archives
+*.zip
+*.rar
+*.7z
+
+# Scraped/training dataset
+dataset/
+datasets/
+raw_dataset/
+scraped_dataset/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp

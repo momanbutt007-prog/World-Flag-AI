@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>World Flag AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+
+<!-- ======================================================
+     NAVBAR
+====================================================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            🌍
+        </div>
+
+        <div>
+
+            <div class="logo-title">
+                World Flag <span>AI</span>
+            </div>
+
+            <div class="logo-subtitle">
+                Intelligent Flag Recognition
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="model-status">
+
+        <span class="status-dot"></span>
+
+        AI MODEL ONLINE
+
+    </div>
+
+</nav>
+
+
+
+<!-- ======================================================
+     MAIN
+====================================================== -->
+
+<main class="container">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-badge">
+            ✦ 194 COUNTRY CLASSIFIER
+        </div>
+
+        <h1>
+            Identify Any
+            <span>National Flag</span>
+        </h1>
+
+        <p>
+            Upload a flag image and let our deep learning
+            model identify the country in seconds.
+        </p>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         UPLOAD CARD
+    ================================================== -->
+
+    <section class="upload-card">
+
+        <div
+            id="drop-zone"
+            class="drop-zone"
+        >
+
+            <div class="upload-icon">
+                📤
+            </div>
+
+            <h2>
+                Drop your flag here
+            </h2>
+
+            <p>
+                or click to browse from your computer
+            </p>
+
+            <span class="upload-hint">
+                JPG • JPEG • PNG • WEBP
+            </span>
+
+            <input
+                type="file"
+                id="image-input"
+                accept=".jpg,.jpeg,.png,.webp"
+                hidden
+            >
+
+            <button
+                type="button"
+                id="browse-button"
+                class="browse-button"
+            >
+                Choose Image
+            </button>
+
+        </div>
+
+
+        <!-- IMAGE PREVIEW -->
+
+        <div
+            id="preview-container"
+            class="preview-container hidden"
+        >
+
+            <div class="preview-header">
+
+                <span>
+                    Selected Image
+                </span>
+
+                <button
+                    type="button"
+                    id="remove-button"
+                >
+                    ✕ Remove
+                </button>
+
+            </div>
+
+
+            <div class="preview-image-wrapper">
+
+                <img
+                    id="preview-image"
+                    src=""
+                    alt="Flag preview"
+                >
+
+            </div>
+
+
+            <button
+                type="button"
+                id="analyze-button"
+                class="analyze-button"
+            >
+
+                <span>
+                    🔍
+                </span>
+
+                Analyze Flag
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         LOADING
+    ================================================== -->
+
+    <div
+        id="loading"
+        class="loading hidden"
+    >
+
+        <div class="spinner"></div>
+
+        <h3>
+            Analyzing your flag...
+        </h3>
+
+        <p>
+            Our AI is comparing the image against
+            194 national flag classes.
+        </p>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         ERROR
+    ================================================== -->
+
+    <div
+        id="error-box"
+        class="error-box hidden"
+    >
+    </div>
+
+
+
+    <!-- ==================================================
+         RESULT
+    ================================================== -->
+
+    <section
+        id="result"
+        class="result-section hidden"
+    >
+
+        <div class="result-header">
+
+            <div>
+
+                <span class="result-label">
+                    AI PREDICTION
+                </span>
+
+                <h2>
+                    Prediction Result
+                </h2>
+
+            </div>
+
+            <div class="success-badge">
+                ✓ IDENTIFIED
+            </div>
+
+        </div>
+
+
+        <!-- MAIN RESULT -->
+
+        <div class="prediction-card">
+
+            <div class="prediction-icon">
+                🌍
+            </div>
+
+            <div class="prediction-content">
+
+                <div
+                    id="country-name"
+                    class="country-name"
+                >
+                </div>
+
+                <div
+                    id="official-name"
+                    class="official-name"
+                >
+                </div>
+
+                <div class="confidence-row">
+
+                    <span>
+                        Confidence
+                    </span>
+
+                    <strong
+                        id="confidence"
+                    >
+                    </strong>
+
+                </div>
+
+                <div class="confidence-track">
+
+                    <div
+                        id="confidence-bar"
+                        class="confidence-bar"
+                    >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             COUNTRY INFORMATION
+        ================================================== -->
+
+        <div class="section-heading">
+
+            <span>📋</span>
+
+            Country Information
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <span>🏛️</span>
+
+                <div>
+                    <small>Capital</small>
+
+                    <strong id="capital">
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>🌎</span>
+
+                <div>
+                    <small>Continent</small>
+
+                    <strong id="continent">
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>📍</span>
+
+                <div>
+                    <small>Region</small>
+
+                    <strong id="region">
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>💰</span>
+
+                <div>
+                    <small>Currency</small>
+
+                    <strong id="currency">
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>🗣️</span>
+
+                <div>
+                    <small>Languages</small>
+
+                    <strong id="languages">
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>📅</span>
+
+                <div>
+                    <small>Independence</small>
+
+                    <strong id="independence">
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             DESCRIPTION
+        ================================================== -->
+
+        <div class="content-grid">
+
+
+            <div class="content-card">
+
+                <div class="content-title">
+                    🚩 Flag Description
+                </div>
+
+                <p id="flag-description">
+                </p>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="content-title">
+                    💡 Interesting Fact
+                </div>
+
+                <p id="interesting-fact">
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             HISTORY
+        ================================================== -->
+
+        <div class="content-card full-width">
+
+            <div class="content-title">
+                📖 Short History
+            </div>
+
+            <p id="history">
+            </p>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             NEIGHBORS
+        ================================================== -->
+
+        <div
+            id="neighbors-section"
+            class="content-card full-width"
+        >
+
+            <div class="content-title">
+                🗺️ Neighboring Countries
+            </div>
+
+            <p id="neighbors">
+            </p>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             TOP 5
+        ================================================== -->
+
+        <div class="section-heading">
+
+            <span>📊</span>
+
+            Top 5 Predictions
+
+        </div>
+
+
+        <div
+            id="top-predictions"
+            class="top-predictions"
+        >
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🌍 World Flag AI
+        </div>
+
+        <p>
+            194-Class Deep Learning Flag Recognition System
+        </p>
+
+        <span>
+            TensorFlow • Keras • Python • Flask
+        </span>
+
+    </footer>
+
+</main>
+
+
+<script
+    src="{{ url_for('static', filename='js/app.js') }}"
+></script>
+
+</body>
+
+</html>
