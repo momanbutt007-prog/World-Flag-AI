@@ -154,9 +154,9 @@
     "currency": "Armenian dram (AMD)",
     "languages": "Armenian",
     "flag_description": "Three horizontal bands of red, blue and orange.",
-    "short_history": "Armenia's history stretches back over three thousand years, and it became the first nation to adopt Christianity as a state religion in 301 CE. Over subsequent centuries, Armenian territory was repeatedly contested by Persian, Byzantine, and Ottoman empires. The early twentieth century brought the Armenian Genocide of 1915 to 1923, during which the Ottoman government killed an estimated 1.5 million Armenians, an event central to national memory though still disputed by Turkey. Armenia became part of the Soviet Union before restoring independence in 1991. Since independence, Armenia has faced ongoing tension with Azerbaijan over the Nagorno-Karabakh region.",
+    "short_history": "Armenia's history stretches back over three thousand years, and it became the first nation to adopt Christianity as a state religion in 301 CE. Over subsequent centuries, Armenian territory was repeatedly contested by Persian, Byzantine, and Ottoman empires. The early twentieth century brought the Armenian Genocide of 1915 to 1923, during which the Ottoman government killed an estimated 1.5 million Armenians, an event central to national memory though still disputed by Türkiye. Armenia became part of the Soviet Union before restoring independence in 1991. Since independence, Armenia has faced ongoing tension with Azerbaijan over the Nagorno-Karabakh region.",
     "interesting_fact": "Armenia was the first state to adopt Christianity as a state religion.",
-    "neighbors": "Georgia, Azerbaijan, Iran, Turkey",
+    "neighbors": "Georgia, Azerbaijan, Iran, Türkiye",
     "aliases": "Hayastan"
   },
   {
@@ -216,7 +216,7 @@
     "flag_description": "A horizontal blue, red and green tricolor with a white crescent and eight-pointed star on the red band.",
     "short_history": "Azerbaijan's history in the South Caucasus includes periods of Persian, Arab, and Ottoman influence, and it briefly became the first secular democratic republic in the Muslim world in 1918 before Soviet annexation in 1920. As part of the Soviet Union, Azerbaijan became a major center of oil production. It restored independence in 1991, but the early independence period was dominated by a war with Armenia over the Nagorno-Karabakh region. Azerbaijan regained control over most of the territory following a 2020 conflict and a further 2023 military operation. The country's economy remains heavily reliant on oil and natural gas exports.",
     "interesting_fact": "Azerbaijan is known as the Land of Fire because of its natural gas flames and historic fire traditions.",
-    "neighbors": "Russia, Georgia, Armenia, Iran, Turkey",
+    "neighbors": "Russia, Georgia, Armenia, Iran, Türkiye",
     "aliases": "Azeri, Land of Fire"
   },
   {
@@ -516,7 +516,7 @@
     "flag_description": "The national flag of Bulgaria.",
     "short_history": "Bulgaria's history traces back to the First Bulgarian Empire, founded in 681, one of the earliest medieval Slavic states in Europe, followed by a Second Bulgarian Empire before nearly five centuries of Ottoman rule beginning in the late fourteenth century. Bulgaria regained autonomy in 1878 following the Russo-Turkish War and full independence in 1908. The twentieth century brought involvement in the Balkan Wars and both World Wars, followed by decades as a communist state allied with the Soviet Union until 1989. Bulgaria transitioned to a multiparty democracy in the 1990s and joined the European Union in 2007, drawing on a rich heritage of Thracian, Slavic, and Ottoman influences.",
     "interesting_fact": "Bulgaria has unique cultural, geographic and historical characteristics.",
-    "neighbors": "Romania, Serbia, North Macedonia, Greece, Turkey",
+    "neighbors": "Romania, Serbia, North Macedonia, Greece, Türkiye",
     "aliases": "Bulgaria"
   },
   {
@@ -874,7 +874,7 @@
     "currency": "Euro (EUR)",
     "languages": "Greek, Turkish",
     "flag_description": "The national flag of Cyprus.",
-    "short_history": "Cyprus's history stretches back to ancient Greek and Phoenician settlement, followed by successive rule under Roman, Byzantine, Lusignan, Venetian, and Ottoman powers before becoming a British colony in 1878, formalized in 1914. Cyprus gained independence from Britain in 1960. Intercommunal tensions between the Greek Cypriot majority and Turkish Cypriot minority culminated in a 1974 coup and subsequent Turkish military intervention, dividing the island into a Greek Cypriot south and a Turkish Cypriot north, the latter recognized only by Turkey. The Republic of Cyprus joined the European Union in 2004, while reunification talks between the two communities have continued intermittently without resolution.",
+    "short_history": "Cyprus's history stretches back to ancient Greek and Phoenician settlement, followed by successive rule under Roman, Byzantine, Lusignan, Venetian, and Ottoman powers before becoming a British colony in 1878, formalized in 1914. Cyprus gained independence from Britain in 1960. Intercommunal tensions between the Greek Cypriot majority and Turkish Cypriot minority culminated in a 1974 coup and subsequent Turkish military intervention, dividing the island into a Greek Cypriot south and a Turkish Cypriot north, the latter recognized only by Türkiye. The Republic of Cyprus joined the European Union in 2004, while reunification talks between the two communities have continued intermittently without resolution.",
     "interesting_fact": "Cyprus has unique cultural, geographic and historical characteristics.",
     "neighbors": "None (island nation)",
     "aliases": "Cyprus"
@@ -1276,7 +1276,7 @@
     "flag_description": "The national flag of Georgia.",
     "short_history": "Georgia's history includes ancient kingdoms and an early adoption of Christianity in the fourth century, followed by centuries of invasions by Persian, Arab, Mongol, and Ottoman forces before Russian imperial annexation in the early nineteenth century. Georgia briefly achieved independence in 1918 before Soviet annexation in 1921. It restored independence in 1991 amid the Soviet Union's collapse, though the following decades brought internal conflicts in the breakaway regions of Abkhazia and South Ossetia, culminating in a brief war with Russia in 2008. Georgia has since pursued closer ties with Europe and NATO while continuing to navigate tensions with Russia.",
     "interesting_fact": "Georgia has unique cultural, geographic and historical characteristics.",
-    "neighbors": "Russia, Azerbaijan, Armenia, Turkey",
+    "neighbors": "Russia, Azerbaijan, Armenia, Türkiye",
     "aliases": "Georgia"
   },
   {
@@ -1336,7 +1336,7 @@
     "flag_description": "Blue and white stripes with a white cross on a blue canton.",
     "short_history": "Greece's history includes ancient civilizations that laid foundations for Western philosophy, democracy, theater, and science, followed by the classical era of city-states such as Athens and Sparta and later incorporation into the Roman and Byzantine Empires. Greece fell under nearly four centuries of Ottoman rule before winning independence through a war fought from 1821 to 1829, aided by European powers. The twentieth century brought territorial expansion, occupation during World War II, a subsequent civil war, and a military dictatorship from 1967 to 1974 before democracy was restored. Greece joined the European Union in 1981 and has remained influential through its classical heritage and Mediterranean tourism industry.",
     "interesting_fact": "Ancient Greece strongly influenced Western philosophy, politics, science and art.",
-    "neighbors": "Albania, North Macedonia, Bulgaria, Turkey",
+    "neighbors": "Albania, North Macedonia, Bulgaria, Türkiye",
     "aliases": "Hellas, Hellenic Republic"
   },
   {
@@ -1576,7 +1576,7 @@
     "flag_description": "Green, white and red horizontal bands with the national emblem in red at the center.",
     "short_history": "Iran's history encompasses ancient Persian empires, notably the Achaemenid Empire founded by Cyrus the Great in the sixth century BCE, one of the largest empires of the ancient world, followed by successive dynasties including the Sassanids, and the seventh-century Arab conquest that introduced Islam. The Safavid dynasty established Shia Islam as the state religion in the sixteenth century. In the twentieth century, the Pahlavi dynasty pursued modernization until the 1979 Islamic Revolution, led by Ayatollah Ruhollah Khomeini, overthrew the monarchy and established an Islamic republic. Iran subsequently fought a devastating eight-year war with Iraq in the 1980s and has remained a major, often contested, regional power.",
     "interesting_fact": "Iran was historically known as Persia.",
-    "neighbors": "Iraq, Turkey, Armenia, Azerbaijan, Turkmenistan, Afghanistan, Pakistan",
+    "neighbors": "Iraq, Türkiye, Armenia, Azerbaijan, Turkmenistan, Afghanistan, Pakistan",
     "aliases": "Persia"
   },
   {
@@ -1596,7 +1596,7 @@
     "flag_description": "Red, white and black horizontal bands with green Arabic script on the white band.",
     "short_history": "Iraq occupies much of ancient Mesopotamia, often called the cradle of civilization, home to the Sumerians, Babylonians, and Assyrians, who developed early writing, law codes, and urban society. The region came under Arab, Mongol, and Ottoman rule before Britain established a mandate after World War I, from which the Kingdom of Iraq gained independence in 1932. A 1958 coup ended the monarchy, and the Baath Party, eventually led by Saddam Hussein from 1979, established an authoritarian government responsible for a costly war with Iran in the 1980s and the 1990 invasion of Kuwait. A US-led invasion in 2003 toppled Saddam Hussein, leading to prolonged instability, sectarian conflict, and the rise and eventual defeat of the Islamic State group.",
     "interesting_fact": "Mesopotamia between the Tigris and Euphrates rivers is often called the cradle of civilization.",
-    "neighbors": "Turkey, Iran, Kuwait, Saudi Arabia, Jordan, Syria",
+    "neighbors": "Türkiye, Iran, Kuwait, Saudi Arabia, Jordan, Syria",
     "aliases": "Mesopotamia"
   },
   {
@@ -3376,7 +3376,7 @@
     "flag_description": "The national flag of Syria.",
     "short_history": "Syria's history includes some of the world's oldest continuously inhabited cities, notably Damascus, and successive rule by Akkadian, Assyrian, Persian, Greek, Roman, and Islamic empires, briefly serving as the seat of the Umayyad Caliphate in the seventh and eighth centuries. France administered Syria under a League of Nations mandate after World War I, and Syria gained independence in 1946. The Assad family ruled Syria from 1971, when Hafez al-Assad seized power, through his son Bashar al-Assad, until a popular uprising in 2011 escalated into a devastating multi-sided civil war involving numerous factions and foreign powers. Assad's government was finally overthrown by opposition forces in late 2024, ending over five decades of family rule amid an uncertain transition.",
     "interesting_fact": "Syria has unique cultural, geographic and historical characteristics.",
-    "neighbors": "Turkey, Iraq, Jordan, Israel, Lebanon",
+    "neighbors": "Türkiye, Iraq, Jordan, Israel, Lebanon",
     "aliases": "Syria"
   },
   {
@@ -3541,8 +3541,8 @@
   },
   {
     "class_id": 178,
-    "country_name": "Turkey",
-    "official_name": "Turkey",
+    "country_name": "Türkiye",
+    "official_name": "Türkiye",
     "capital": "Ankara",
     "continent": "Europe/Asia",
     "region": "Western Asia",
@@ -3554,10 +3554,10 @@
     "currency": "Turkish lira (TRY)",
     "languages": "Turkish",
     "flag_description": "A red field with a white crescent and five-pointed star.",
-    "short_history": "Turkey's history includes the Byzantine Empire, centered on Constantinople, before the Ottoman conquest in 1453 established one of history's largest and longest-lasting Islamic empires, spanning three continents at its height. Following the Ottoman Empire's collapse after World War I, Mustafa Kemal Ataturk led a war of independence and founded the modern secular Republic of Turkey in 1923, implementing sweeping reforms to modernize and Westernize the new state. Turkey has since navigated periods of military intervention in politics, a failed 2016 coup attempt, and a shift under President Recep Tayyip Erdogan toward a more centralized presidential system and a more prominent, sometimes assertive, role in regional affairs, all while straddling a unique position bridging Europe and Asia.",
+    "short_history": "Türkiye's history includes the Byzantine Empire, centered on Constantinople, before the Ottoman conquest in 1453 established one of history's largest and longest-lasting Islamic empires, spanning three continents at its height. Following the Ottoman Empire's collapse after World War I, Mustafa Kemal Ataturk led a war of independence and founded the modern secular Republic of Türkiye in 1923, implementing sweeping reforms to modernize and Westernize the new state. Türkiye has since navigated periods of military intervention in politics, a failed 2016 coup attempt, and a shift under President Recep Tayyip Erdogan toward a more centralized presidential system and a more prominent, sometimes assertive, role in regional affairs, all while straddling a unique position bridging Europe and Asia.",
     "interesting_fact": "Türkiye lies on both Europe and Asia.",
     "neighbors": "Greece, Bulgaria, Georgia, Armenia, Azerbaijan, Iran, Iraq, Syria",
-    "aliases": "Türkiye, Turkey"
+    "aliases": "Türkiye"
   },
   {
     "class_id": 179,
