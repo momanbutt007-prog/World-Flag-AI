@@ -1,5 +1,3 @@
-`2.20.0`
-
 ````markdown
 # 🌍 World Flag AI
 
