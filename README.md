@@ -1,16 +1,47 @@
 <div align="center">
 
+# 🌍 World Flag AI
+
+### AI-Powered National Flag Recognition System
+
+*Upload a flag → AI identifies the country → Rich country profile displayed*
+
+<br>
+
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-REST_API-000000?style=for-the-badge&logo=flask&logoColor=white)
+![License](https://img.shields.io/badge/License-Educational-6A5ACD?style=for-the-badge)
+
+<br>
+
+**194 countries · Deep learning classifier · Dual interface (Web UI + REST API)**
+
+<br>
+
+<!-- 🖼️ Suggested: add a real screenshot or GIF of the app here -->
+<!-- ![demo](docs/demo.gif) -->
+
+[Features](#-key-features) •
+[Demo](#-example) •
+[Quick Start](#-quick-start) •
+[API](#-rest-api) •
+[Architecture](#-architecture)
+
+</div>
+
 ---
 
 ## 📌 Table of Contents
 
-|                                                  |                                    |                                                   |
-| ------------------------------------------------ | ---------------------------------- | ------------------------------------------------- |
-| [About](#-about-the-project)                      | [Key Features](#-key-features)      | [How It Works](#-how-it-works)                     |
-| [The Model](#-machine-learning-model)             | [Dataset](#-dataset)                | [Country Database](#-country-information-database) |
-| [Project Structure](#-project-structure)          | [Quick Start](#-quick-start)        | [REST API](#-rest-api)                             |
-| [Testing &amp; Evaluation](#-testing--evaluation) | [Use Cases](#-where-can-it-be-used) | [Limitations](#-limitations)                       |
-| [Roadmap](#-roadmap)                              | [Architecture](#-architecture)      | [Author](#-author)                                 |
+| | | |
+|---|---|---|
+| [About](#-about-the-project) | [Key Features](#-key-features) | [How It Works](#-how-it-works) |
+| [The Model](#-machine-learning-model) | [Dataset](#-dataset) | [Country Database](#-country-information-database) |
+| [Project Structure](#-project-structure) | [Quick Start](#-quick-start) | [REST API](#-rest-api) |
+| [Testing & Evaluation](#-testing--evaluation) | [Use Cases](#-where-can-it-be-used) | [Limitations](#-limitations) |
+| [Roadmap](#-roadmap) | [Architecture](#-architecture) | [Author](#-author) |
 
 ---
 
@@ -20,10 +51,10 @@
 
 It ships with **two interfaces that share one prediction core**, so the logic is written once and reused everywhere:
 
-| Interface                   | Purpose                                                                              |
-| --------------------------- | ------------------------------------------------------------------------------------ |
-| 🖥️**Streamlit App** | A friendly UI — upload an image, get an instant visual result                       |
-| 🔌**Flask REST API**  | A JSON endpoint for integrating flag recognition into other apps, sites, or services |
+| Interface | Purpose |
+|---|---|
+| 🖥️ **Streamlit App** | A friendly UI — upload an image, get an instant visual result |
+| 🔌 **Flask REST API** | A JSON endpoint for integrating flag recognition into other apps, sites, or services |
 
 > **Goal:** demonstrate an end-to-end applied ML product — dataset creation → training → evaluation → deployment — using Python, computer vision, and web development together.
 
@@ -34,6 +65,37 @@ It ships with **two interfaces that share one prediction core**, so the logic is
 <table>
 <tr>
 <td width="50%" valign="top">
+
+**🤖 AI Flag Recognition**
+Classifies flags across **194 country classes**.
+
+**🖼️ Flexible Image Upload**
+Accepts `JPG`, `JPEG`, `PNG`, `WEBP`.
+
+**🎯 Confidence Score**
+Every prediction includes a probability score.
+
+**📊 Top-5 Predictions**
+See the runner-up guesses, not just the winner.
+
+</td>
+<td width="50%" valign="top">
+
+**🌍 Full Country Profiles**
+Capital, continent, currency, languages, ISO codes, and more.
+
+**📖 History & Fun Facts**
+Short historical overview + an interesting fact per country.
+
+**🗺️ Neighboring Countries**
+Geographic context where available.
+
+**🔌 REST API**
+Drop-in endpoint for any external application.
+
+</td>
+</tr>
+</table>
 
 **Example prediction:**
 
@@ -64,13 +126,13 @@ flowchart LR
 
 ## 🤖 Machine Learning Model
 
-| Property     | Value                                                                                                                |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- |
-| Framework    | TensorFlow / Keras                                                                                                   |
-| Model file   | `World_Flag_AI_final.keras` (~68 MB)                                                                               |
-| Input shape  | `300 × 300 × 3` (RGB)                                                                                            |
-| Output shape | `194` classes                                                                                                      |
-| Indexing     | Model output is 0-indexed; the project maps it to a 1-indexed`class_id` (e.g. model index `0` → `class_id 1`) |
+| Property | Value |
+|---|---|
+| Framework | TensorFlow / Keras |
+| Model file | `World_Flag_AI_final.keras` (~68 MB) |
+| Input shape | `300 × 300 × 3` (RGB) |
+| Output shape | `194` classes |
+| Indexing | Model output is 0-indexed; the project maps it to a 1-indexed `class_id` (e.g. model index `0` → `class_id 1`) |
 
 ---
 
@@ -133,19 +195,19 @@ This separation keeps the model focused purely on visual classification, while t
 
 <br>
 
-| Step | What it does                                                |
-| ---- | ----------------------------------------------------------- |
-| 1    | Load`countries.json`                                      |
-| 2    | Validate all 194 records exist, with`class_id` 1 → 194   |
-| 3    | Verify Palestine is present                                 |
-| 4    | Verify Israel is absent                                     |
-| 5    | Load`World_Flag_AI_final.keras`                           |
-| 6    | Validate model input shape`(None, 300, 300, 3)`           |
-| 7    | Validate model output shape`(None, 194)`                  |
-| 8    | Preprocess: RGB → resize → NumPy array → batch dimension |
-| 9    | Run prediction across 194 classes                           |
-| 10   | Select the highest-probability class                        |
-| 11   | Compute the Top-5 predictions                               |
+| Step | What it does |
+|---|---|
+| 1 | Load `countries.json` |
+| 2 | Validate all 194 records exist, with `class_id` 1 → 194 |
+| 3 | Verify Palestine is present |
+| 4 | Verify Israel is absent |
+| 5 | Load `World_Flag_AI_final.keras` |
+| 6 | Validate model input shape `(None, 300, 300, 3)` |
+| 7 | Validate model output shape `(None, 194)` |
+| 8 | Preprocess: RGB → resize → NumPy array → batch dimension |
+| 9 | Run prediction across 194 classes |
+| 10 | Select the highest-probability class |
+| 11 | Compute the Top-5 predictions |
 
 </details>
 
@@ -212,7 +274,6 @@ pip install -r requirements.txt
 ```bash
 streamlit run streamlit_app/app.py
 ```
-
 ➡️ Opens at `http://localhost:8501`
 
 ### Run the Flask app
@@ -220,7 +281,6 @@ streamlit run streamlit_app/app.py
 ```bash
 python flask_app/app.py
 ```
-
 ➡️ Runs at `http://127.0.0.1:5000` · Health check at `/health`
 
 ---
@@ -238,14 +298,14 @@ curl -X POST http://127.0.0.1:5000/api/predict \
 
 **Response fields:**
 
-| Field                  | Description                                 |
-| ---------------------- | ------------------------------------------- |
-| `class_id`           | Predicted class index (1–194)              |
-| `country`            | Predicted country name                      |
-| `confidence`         | Raw probability (0–1)                      |
-| `confidence_percent` | Confidence as a percentage                  |
-| `top_predictions`    | Top-5 ranked predictions                    |
-| `country_info`       | Full country profile from`countries.json` |
+| Field | Description |
+|---|---|
+| `class_id` | Predicted class index (1–194) |
+| `country` | Predicted country name |
+| `confidence` | Raw probability (0–1) |
+| `confidence_percent` | Confidence as a percentage |
+| `top_predictions` | Top-5 ranked predictions |
+| `country_info` | Full country profile from `countries.json` |
 
 ### `GET /health`
 
@@ -270,15 +330,15 @@ Tests live in `tests/` (`test_model.py`, `test_predictor.py`, plus a `test_image
 
 <br>
 
-| Class A        | Often confused with              |
-| -------------- | -------------------------------- |
-| Congo          | Democratic Republic of the Congo |
-| Netherlands    | Luxembourg                       |
-| Austria        | Monaco / Latvia                  |
-| Chad           | Romania                          |
-| Guinea         | Benin                            |
-| Côte d'Ivoire | Ireland                          |
-| Italy          | Monaco                           |
+| Class A | Often confused with |
+|---|---|
+| Congo | Democratic Republic of the Congo |
+| Netherlands | Luxembourg |
+| Austria | Monaco / Latvia |
+| Chad | Romania |
+| Guinea | Benin |
+| Côte d'Ivoire | Ireland |
+| Italy | Monaco |
 
 These are hard cases because the flags share very similar colors, layouts, or proportions.
 
@@ -289,21 +349,21 @@ These are hard cases because the flags share very similar colors, layouts, or pr
 
 <br>
 
-| Country    | Before | After   |
-| ---------- | ------ | ------- |
-| Luxembourg | 40%    | ✅ 100% |
-| Libya      | 60%    | ✅ 100% |
-| Argentina  | 60%    | ✅ 100% |
-| Bahrain    | 60%    | ✅ 100% |
-| Austria    | 20%    | 60%     |
+| Country | Before | After |
+|---|---|---|
+| Luxembourg | 40% | ✅ 100% |
+| Libya | 60% | ✅ 100% |
+| Argentina | 60% | ✅ 100% |
+| Bahrain | 60% | ✅ 100% |
+| Austria | 20% | 60% |
 
-| Country     | Before | After |
-| ----------- | ------ | ----- |
-| Congo       | 60%    | ❌ 0% |
-| Netherlands | 60%    | ❌ 0% |
-| Italy       | 100%   | 60%   |
-| Finland     | 100%   | 60%   |
-| Bolivia     | 80%    | 40%   |
+| Country | Before | After |
+|---|---|---|
+| Congo | 60% | ❌ 0% |
+| Netherlands | 60% | ❌ 0% |
+| Italy | 100% | 60% |
+| Finland | 100% | 60% |
+| Bolivia | 80% | 40% |
 
 This trade-off is exactly why **per-class evaluation** matters more than a single overall accuracy number when tuning a multi-class classifier.
 
@@ -313,14 +373,14 @@ This trade-off is exactly why **per-class evaluation** matters more than a singl
 
 ## 🌍 Where Can It Be Used?
 
-| Use Case                         | Description                                                                               |
-| -------------------------------- | ----------------------------------------------------------------------------------------- |
-| 🎓**Education**            | Interactive geography tool — flag in, capital/history/currency out                       |
-| 🧳**Travel Apps**          | Identify flags in travel photos, airports, tourist sites                                  |
-| 🏫**Quizzes & Games**      | AI-verified flag-guessing games for classrooms or apps                                    |
-| 📱**Mobile Backends**      | Flask API powers a "snap a photo, get the country" mobile flow                            |
-| 🌐**Web Integrations**     | Drop the API into educational portals, travel sites, quizzes                              |
-| 🔬**CV Research/Teaching** | Reference example of multi-class classification, dataset creation, and confusion analysis |
+| Use Case | Description |
+|---|---|
+| 🎓 **Education** | Interactive geography tool — flag in, capital/history/currency out |
+| 🧳 **Travel Apps** | Identify flags in travel photos, airports, tourist sites |
+| 🏫 **Quizzes & Games** | AI-verified flag-guessing games for classrooms or apps |
+| 📱 **Mobile Backends** | Flask API powers a "snap a photo, get the country" mobile flow |
+| 🌐 **Web Integrations** | Drop the API into educational portals, travel sites, quizzes |
+| 🔬 **CV Research/Teaching** | Reference example of multi-class classification, dataset creation, and confusion analysis |
 
 ---
 
@@ -362,14 +422,14 @@ flowchart TD
 
 ## 🛠️ Tech Stack
 
-| Layer    | Technologies                     |
-| -------- | -------------------------------- |
-| Language | Python                           |
-| ML / CV  | TensorFlow, Keras, NumPy, Pillow |
+| Layer | Technologies |
+|---|---|
+| Language | Python |
+| ML / CV | TensorFlow, Keras, NumPy, Pillow |
 | Frontend | Streamlit, HTML, CSS, JavaScript |
-| Backend  | Flask, REST API                  |
-| Data     | JSON, custom image dataset       |
-| Tooling  | Git, GitHub, VS Code, venv       |
+| Backend | Flask, REST API |
+| Data | JSON, custom image dataset |
+| Tooling | Git, GitHub, VS Code, venv |
 
 ---
 
@@ -382,3 +442,14 @@ This project is intended for **educational, research, and demonstration purposes
 ## 👨‍💻 Author
 
 <div align="center">
+
+### Momin Butt
+**Artificial Intelligence & Data Science Developer**
+
+`Python` · `Machine Learning` · `Deep Learning` · `Computer Vision` · `TensorFlow` · `Keras` · `Flask` · `Streamlit` · `REST APIs` · `Git & GitHub`
+
+---
+
+⭐ **If you found this project useful, consider giving it a star!**
+
+</div>
